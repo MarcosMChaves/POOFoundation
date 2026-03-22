@@ -1,7 +1,7 @@
 ﻿
 using System.Text.RegularExpressions;
 
-namespace POOFoundation
+namespace OOPFoundation
 {
     public class Text : ISanitization, ITextValidation
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace POOFoundation
+namespace OOPFoundation
 {
     public interface ITextValidation
     {
