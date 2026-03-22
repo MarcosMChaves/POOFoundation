@@ -9,6 +9,9 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageTags>OOP; Teaching</PackageTags>
+    <Description>Basic definitions of Abstract Classes, Interfaces and Classes for the Object-Oriented Paradigm classes.</Description>
+    <Company>Marcos M. Chaves</Company>
   </PropertyGroup>
 
   <ItemGroup>
