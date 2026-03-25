@@ -1,4 +1,6 @@
 ﻿
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace OOPFoundation
@@ -21,7 +23,7 @@ namespace OOPFoundation
             {
                 throw new ArgumentException($"Invalid argument 'text'='{text}' !");
             }
-            _Text = text;
+            _Text = sanitizedText;
         }
 
         public string Sanitize(string textToSanitize)
@@ -53,6 +55,21 @@ namespace OOPFoundation
         public string GetText()
         {
             return _Text;
+        }
+
+        public string ObtainHashedText()
+        {
+            return Convert.ToHexString(Hash()); 
+        }
+        private byte[] Hash()
+        {
+            return SHA256.HashData(Encode());
+
+        }
+        private byte[] Encode()
+        {
+            return Encoding.UTF8.GetBytes(_Text);
+
         }
     }
 }
