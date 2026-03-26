@@ -7,7 +7,7 @@ namespace OOPFoundation
 {
     public abstract class AText : ISanitization, ITextValidation
     {
-        protected readonly string Text;
+        protected string Text;
         protected readonly string ValidPattern;
 
         public AText(string text, string validPattern)
