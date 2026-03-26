@@ -1,13 +1,11 @@
 ﻿
 namespace OOPFoundation
 {
-    public class Year: IIntegerValidation
+    public class Year: AIntegerValidation
     {
         private readonly int _Year;
-        private readonly int LowerLimit;
-        private readonly int UpperLimit;
 
-        public Year(int year, int lowerLimit = 0, int upperLimit= 0)
+        public Year(int year, int lowerLimit = 0, int upperLimit= 0): base(lowerLimit, upperLimit)
         {
             if (upperLimit == 0)
             {
@@ -18,35 +16,24 @@ namespace OOPFoundation
                 lowerLimit = upperLimit - 100; // maximum of 100 years back
             }
 
-            if (lowerLimit < 0)
+            if (LowerLimit < 0)
             {
                 throw new ArgumentException($"Invalid Argument 'lowerLimit'={lowerLimit}!");
             }
-            if (upperLimit < lowerLimit)
+            if (UpperLimit < LowerLimit)
             {
                 throw new ArgumentException($"Invalid Argument 'upperLimit'={upperLimit}!");
             }
 
-            LowerLimit = lowerLimit;
-            UpperLimit = upperLimit;
+            base.LowerLimit = lowerLimit;
+            base.UpperLimit = upperLimit;
 
-            if (!IntegerIsValid(integerToValidate: year))
+            if (!base.IntegerIsValid(year))
             {
-                throw new ArgumentException($"Invalid Argument 'year'={year} [{LowerLimit}-{UpperLimit}]!");
+                throw new ArgumentException($"Invalid Argument 'year'={year} MUST BE [{lowerLimit}, {upperLimit}]!");
             }
 
             _Year = year;
-        }
-
-        public bool IntegerIsValid(int integerToValidate)
-        {
-            if (integerToValidate < LowerLimit ||
-                integerToValidate > UpperLimit)
-            {
-                return false;
-            }
-
-            return true;
         }
 
         public int GetYear()
