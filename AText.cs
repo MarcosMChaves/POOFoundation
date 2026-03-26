@@ -52,6 +52,10 @@ namespace OOPFoundation
             return true;
         }
 
+        public string GetText()
+        {
+            return Text;
+        }
         public string ObtainHashedText()
         {
             return Convert.ToHexString(Hash()); 

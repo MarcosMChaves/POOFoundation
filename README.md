@@ -23,7 +23,7 @@
 `ITextValidation`
 
 ### Classes
-`Currency` *extends* `ADecimalValidation`: it is used to create a currency object to represent a real world currency e.g. **BRL** as for ==Brazilian Reais== or **GBP** as for ==Great Britain Pound==, validating and retaining its value
+`Currency` *extends* `ADecimalValidation`: it is used to create a currency object to represent a real world currency e.g. **BRL** as for **Brazilian Reais** or **GBP** as for **Great Britain Pound**, validating and retaining its value
 
 `SanitizationPattern` : it is used to **standardize** different and more common sanitization patterns like CPF="0-9" (only digits are valid)
 
