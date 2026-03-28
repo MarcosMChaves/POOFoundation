@@ -72,7 +72,7 @@ namespace OOPFoundation
 
         }
 
-        public string ToString(string? format, IFormatProvider? provider)
+        public string ToString(string? format, IFormatProvider? provider = null)
         {
             string validPattern = "\\#0\\/\\-\\s.";
             string sanitizedFormat = Regex.Replace(format, @$"[^{validPattern}]", string.Empty).Trim();

@@ -15,11 +15,11 @@ namespace OOPFoundation
 
             if (LowerLimit < 0.0M) //Should it accept negative values?
             {
-                throw new ArgumentException($"Invalid Argument 'lowerLimit'={lowerLimit}!");
+                throw new ArgumentException($"Invalid Argument 'lowerLimit'=${lowerLimit}!");
             }
             if (UpperLimit < LowerLimit)
             {
-                throw new ArgumentException($"Invalid Argument 'upperLimit'={upperLimit}!");
+                throw new ArgumentException($"Invalid Argument 'upperLimit'=${upperLimit}!");
             }
 
             base.LowerLimit = lowerLimit;
@@ -27,7 +27,7 @@ namespace OOPFoundation
 
             if (!base.DecimalIsValid(currency))
             {
-                throw new ArgumentException($"Invalid Argument 'currency'={currency} MUST BE [${lowerLimit}, ${upperLimit}]!");
+                throw new ArgumentException($"Invalid Argument 'currency'=${currency} MUST be in the range [${lowerLimit}, ${upperLimit}]!");
             }
 
             _Currency = currency;

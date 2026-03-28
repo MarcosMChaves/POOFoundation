@@ -16,11 +16,11 @@ namespace OOPFoundation
                 lowerLimit = upperLimit - 100; // maximum of 100 years back
             }
 
-            if (LowerLimit < 0)
+            if (lowerLimit < 0)
             {
                 throw new ArgumentException($"Invalid Argument 'lowerLimit'={lowerLimit}!");
             }
-            if (UpperLimit < LowerLimit)
+            if (upperLimit < LowerLimit)
             {
                 throw new ArgumentException($"Invalid Argument 'upperLimit'={upperLimit}!");
             }

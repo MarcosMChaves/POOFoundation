@@ -7,7 +7,10 @@
 
 `AIntegerValidation` *implements* `IIntegerValidation` : defines the `IntegerIsValid()` method
 
-`AText` *implements* `ISanitization`, `ITextValidation` : defines both `Sanitize()` and `TextIsValid()` methods
+`AText` *implements* `ISanitization`, `ITextValidation` : defines methods 
+- [ ] `Sanitize()` : used to sanitize (remove) undesired characters
+- [ ] `TextIsValid()` : used to verify if string has only valid content
+- [ ] customized `ToString(mask)` : allows string formatting, e.g. formats **ABC123DEF** with mask '###.###-###' as **ABC.123-DEF**
 
 ### Interfaces
 `IDecimalValidation`
