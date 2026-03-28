@@ -2,10 +2,11 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace OOPFoundation
 {
-    public abstract class AText : ISanitization, ITextValidation
+    public abstract class AText : ISanitization, ITextValidation, IFormattable
     {
         protected string Text;
         protected readonly string ValidPattern;
@@ -70,5 +71,41 @@ namespace OOPFoundation
             return Encoding.UTF8.GetBytes(Text);
 
         }
+
+        public string ToString(string? format, IFormatProvider? provider)
+        {
+            string validPattern = "\\#0\\/\\-\\s.";
+            string sanitizedFormat = Regex.Replace(format, @$"[^{validPattern}]", string.Empty).Trim();
+            if (!TextIsValid(textToValidate: sanitizedFormat))
+            {
+                throw new ArgumentException($"Invalid argument 'format'='{format}' !");
+            }
+
+            validPattern = "\\/\\-\\s.";
+            string removedFormat = Regex.Replace(sanitizedFormat, @$"[{validPattern}]", string.Empty).Trim();
+            if (Text.Length != removedFormat.Length)
+            {
+                throw new ArgumentException($"Invalid argument 'format'='{format}' does not match text!");
+            }
+            string stringFormatada = string.Empty;
+
+            int j = 0;
+            for (int i = 0; i < format.Length; i++)
+            {
+                if (format[i].Equals('0') ||
+                    format[i].Equals('#'))
+                {
+                    stringFormatada += Text[j];
+                    j++;
+                }
+                else
+                {
+                    stringFormatada += format[i];
+                }
+            }
+
+            return stringFormatada;
+        }
+
     }
 }
