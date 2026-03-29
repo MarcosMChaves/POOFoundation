@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../OOPFoundation.Tests/OOPFoundation.Tests.csproj" Id="3266654c-ced4-47a7-a84f-45d66db809cf" />
   <Project Path="OOPFoundation.csproj" />
 </Solution>

@@ -12,7 +12,8 @@ namespace OOPFoundation
                 base(lowerLimit, upperLimit)
         {
             ISOCode = isoCode ?? throw new ArgumentNullException(nameof(isoCode));
-            if(lowerLimit == 0.0M && upperLimit == 0.0M)
+
+            if (lowerLimit == 0.0M && upperLimit == 0.0M)
             {
                 lowerLimit = 0.0M;
                 upperLimit = decimal.MaxValue;
