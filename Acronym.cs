@@ -3,7 +3,9 @@
     public class Acronym : AText
     {
         private readonly int NameLength;
-        public Acronym(string text, string validPattern, int nameLength) : base(text, validPattern)
+        public Acronym(string text, 
+            string validPattern=SanitizationPattern.UPPER_LETTERS_ONLY, 
+            int nameLength=2) : base(text, validPattern)
         {
             if (nameLength < 0 ||
                nameLength > 10)

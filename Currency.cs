@@ -12,7 +12,11 @@ namespace OOPFoundation
                 base(lowerLimit, upperLimit)
         {
             ISOCode = isoCode ?? throw new ArgumentNullException(nameof(isoCode));
-
+            if(lowerLimit == 0.0M && upperLimit == 0.0M)
+            {
+                lowerLimit = 0.0M;
+                upperLimit = decimal.MaxValue;
+            }
             if (LowerLimit < 0.0M) //Should it accept negative values?
             {
                 throw new ArgumentException($"Invalid Argument 'lowerLimit'=${lowerLimit}!");
@@ -36,6 +40,15 @@ namespace OOPFoundation
         public decimal GetCurrency()
         {
             return _Currency;
+        }
+
+        public string ObtainFormattedCurrency()
+        {
+            return Format();
+        }
+        private string Format()
+        {
+            return $"{ISOCode.GetText()}{_Currency:F2}";
         }
     }
 }
