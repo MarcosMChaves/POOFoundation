@@ -11,7 +11,7 @@ namespace OOPFoundation
         protected string Text;
         protected readonly string ValidPattern;
 
-        public AText(string text, string validPattern)
+        public AText(string? text, string validPattern)
         {
             if (!TextIsValid(textToValidate: validPattern))
             {

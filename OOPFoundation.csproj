@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>OOPFoundation</Title>
-	<Version>1.1.8</Version>
+	<Version>1.1.9</Version>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
@@ -16,6 +16,7 @@
     <FileVersion></FileVersion>
     <Copyright>MIT License</Copyright>
     <RepositoryUrl>https://github.com/MarcosMChaves/OOPFoundation</RepositoryUrl>
+    <Authors>Prof. Marcos M. Chaves</Authors>
   </PropertyGroup>
 
   <ItemGroup>

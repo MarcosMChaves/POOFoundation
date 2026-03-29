@@ -10,9 +10,9 @@ namespace OOPFoundation
         public const string ISBN = "0-9";
         public const string ISSN = "0-9Xx";
         public const string EMAIL = "0-9a-zA-Z\\.\\-\\_\\@";
-        public const string COUNTRY = "(?!.*[ -]{2})\\p{L}[\\p{L} -]{1,58}\\p{L}";
-        public const string STATE = "(?!.*[ -]{2})\\p{L}[\\p{L} -]{1,58}\\p{L}";
-        public const string COUNTY = "(?!.*[ -]{2})\\p{L}[\\p{L} -]{1,58}\\p{L}";
+        public const string COUNTRY = "\\p{L}\\s-";
+        public const string STATE = "\\p{L}\\s-";
+        public const string COUNTY = "\\p{L}\\s-";
 
         public const string UTF8 = "\\p{L}";
         public const string TEXT = "\\p{L}\\s.";
