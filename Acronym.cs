@@ -7,7 +7,7 @@
             string validPattern=SanitizationPattern.UPPER_LETTERS_ONLY, 
             int nameLength=2) : base(text, validPattern)
         {
-            if (nameLength < 0 ||
+            if (nameLength < 1 ||
                nameLength > 10)
             {
                 throw new ArgumentOutOfRangeException($"Invalid argument 'nameLength'='{nameLength}'!");
@@ -15,7 +15,7 @@
 
             NameLength = nameLength;
 
-            if (Text.Length != NameLength)
+            if (Text.Length > NameLength)
             {
                 throw new ArgumentException($"Invalid argument 'text'='{text}'!");
             }
