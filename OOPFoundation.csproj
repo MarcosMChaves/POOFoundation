@@ -20,6 +20,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="OOP-Foundation.pdf" />
+    <None Remove="UML-OOPFoundation.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -29,18 +34,5 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-	
-	<ItemGroup>
-		<Content Include="OOP-Foundation.pdf">
-			<Pack>true</Pack>
-			<PackagePath>\</PackagePath>
-		</Content>
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="UML-OOPFoundation.png">
-			<Pack>true</Pack>
-			<PackagePath>\</PackagePath>
-		</Content>
-	</ItemGroup>
 
 </Project>
