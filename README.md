@@ -47,7 +47,7 @@ Defines **Foundation** abstractions, classes and interfaces for teaching **Objec
 
 **Class Diagram**
 
-!(OOP-Foundation.png)
+![UML](OOP-Foundation.png)
 
 ---
 ## NOTICE! 
