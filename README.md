@@ -7,7 +7,8 @@ Defines **Foundation** abstractions, classes and interfaces for teaching **Objec
 ## Structures
 
 ### Packages
-`NONE`
+
+[OOPFoundation](https://www.nuget.org/packages/OOPFoundation/ "OOPFoundation") : defines **foundation** abstractions, classes and interfaces.
 
 ### Abstract Classes
 `ADecimalValidation` *implements* `IDecimalValidation` : defines the `DecimalIsValid()` method
