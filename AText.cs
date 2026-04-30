@@ -2,7 +2,6 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace OOPFoundation
 {
@@ -11,7 +10,7 @@ namespace OOPFoundation
         protected string Text;
         protected readonly string ValidPattern;
 
-        public AText(string? text, string validPattern=SanitizationPattern.TEXT)
+        public AText(string? text, string validPattern=SanitizationPattern.TEXT, bool isOptional = false)
         {
             if (!TextIsValid(textToValidate: validPattern))
             {
@@ -20,7 +19,7 @@ namespace OOPFoundation
             ValidPattern = validPattern;
 
             string sanitizedText = Sanitize(textToSanitize: text);
-            if (!TextIsValid(textToValidate: sanitizedText))
+            if (!TextIsValid(textToValidate: sanitizedText) && !isOptional)
             {
                 throw new ArgumentException($"Invalid argument 'text'='{text}' !");
             }

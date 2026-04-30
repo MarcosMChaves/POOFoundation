@@ -19,7 +19,7 @@ Defines **Foundation** abstractions, classes and interfaces for teaching **Objec
 
 `AText` *implements* `ISanitization`, `ITextValidation` : defines methods 
 - [x] `Sanitize()` : used to sanitize (remove) undesired characters
-- [x] `TextIsValid()` : used to verify if string has only valid content
+- [x] `TextIsValid()` : used to verify if string has only valid [required] content. Validates when content is supplyed, except when `isOptional` flag is set to `true`.
 - [x] customized `ToString(mask)` : allows string formatting, e.g. formats **ABC123DEF** with mask '###.###-###' as **ABC.123-DEF**
 
 ### Interfaces
