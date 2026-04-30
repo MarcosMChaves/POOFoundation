@@ -2,7 +2,7 @@
 
 ###### CST | TADS | POO
 
-Defines **Foundation** abstractions, classes and interfaces for teaching **Object-Oriented Paradigm in C#**. 
+Defines **Foundation** abstractions, classes and interfaces for teaching **Object-Oriented Paradigm in C# **. 
 
 ## Structures
 
